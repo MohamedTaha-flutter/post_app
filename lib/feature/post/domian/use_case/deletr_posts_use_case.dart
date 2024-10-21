@@ -3,13 +3,12 @@ import 'package:post_app/core/error/failure.dart';
 import 'package:post_app/feature/post/domian/entity/get_post_entity.dart';
 import 'package:post_app/feature/post/domian/repository/post_repository.dart';
 
-class GetPostUseCase {
-  final PostRepository postRepository ;
+class DeletePostsUseCase {
+  final PostRepository postRepository;
 
-  GetPostUseCase(this.postRepository);
+  DeletePostsUseCase(this.postRepository);
 
-  Future<Either<Failure, List<GetPostEntity>>> execute  () async
-  {
-    return await postRepository.getPost() ;
+  Future<Either<Failure, Unit>> execute(GetPostEntity posts) async {
+    return await postRepository.deletePosts(posts);
   }
 }
