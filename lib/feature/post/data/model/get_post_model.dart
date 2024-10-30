@@ -1,14 +1,14 @@
 import 'package:post_app/feature/post/domian/entity/get_post_entity.dart';
 
-class GetPostModel extends GetPostEntity {
-  const GetPostModel({
+class PostModel extends PostEntity {
+  const PostModel({
     required super.id,
     required super.title,
     required super.body,
   });
 
-  factory GetPostModel.fromJson(Map<String, dynamic> json) {
-    return GetPostModel(
+  factory PostModel.fromJson(Map<String, dynamic> json) {
+    return PostModel(
       id: json['id:'],
       title: json['title'],
       body: json['body'],

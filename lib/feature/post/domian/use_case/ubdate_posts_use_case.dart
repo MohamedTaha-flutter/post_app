@@ -8,7 +8,7 @@ class UpdatePostsUseCase {
 
   UpdatePostsUseCase(this.postRepository);
 
-  Future<Either<Failure, Unit>>  execute(GetPostEntity posts) async {
+  Future<Either<Failure, Unit>>  execute(PostEntity posts) async {
     return await postRepository.updatePosts(posts);
   }
 }

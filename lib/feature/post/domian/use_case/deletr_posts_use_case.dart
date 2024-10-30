@@ -8,7 +8,7 @@ class DeletePostsUseCase {
 
   DeletePostsUseCase(this.postRepository);
 
-  Future<Either<Failure, Unit>> execute(GetPostEntity posts) async {
-    return await postRepository.deletePosts(posts);
+  Future<Either<Failure, Unit>> execute(int postsId) async {
+    return await postRepository.deletePosts(postsId);
   }
 }

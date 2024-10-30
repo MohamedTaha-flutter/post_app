@@ -8,7 +8,7 @@ class GetPostUseCase {
 
   GetPostUseCase(this.postRepository);
 
-  Future<Either<Failure, List<GetPostEntity>>> execute  () async
+  Future<Either<Failure, List<PostEntity>>> execute  () async
   {
     return await postRepository.getPost() ;
   }
